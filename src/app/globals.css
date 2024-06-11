@@ -125,11 +125,16 @@ body {
   background: rgb(var(--md-sys-color-background));
 }
 
-input, button, select {
+input,
+button,
+select {
   padding: var(--quarter-space);
   border-radius: var(--border-radius);
   border: 2px solid var(--md-sys-color-inverse-primary);
   outline: none;
+  font-family: monospace;
+  font-weight: bolder;
+  font-size: larger;
 }
 
 button {
@@ -198,10 +203,8 @@ header {
 }
 
 .store-item:hover {
-  background-color: var(--md-sys-color-background)
+  background-color: var(--md-sys-color-background);
 }
-
-
 
 .bold {
   font-weight: bolder;
@@ -211,4 +214,11 @@ main {
   display: grid;
   grid-template-rows: 1fr 10fr;
   height: 100vh;
+}
+
+.locate-me {
+  position: absolute;
+  right: var(--half-space);
+  bottom: var(--half-space);
+  z-index: 999;
 }

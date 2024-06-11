@@ -11,7 +11,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <main>
+          <header className="flex-center">
+            <h2>InstaStore</h2>
+          </header>
+          {children}
+        </main>
+      </body>
     </html>
   );
 }

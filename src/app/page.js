@@ -1,53 +1,27 @@
-"use client";
+"use client"
 
-import { useEffect, useState } from "react";
-import Map from "./components/map";
-import StoreList from "./components/store-list";
+import Link from "next/link";
+import { useState, useEffect } from "react";
 
 export default function Home() {
-  const [mockData, setMockData] = useState([]);
-  const [coords, setCoords] = useState([4, -72]);
 
-  useEffect(() => {
-    fetch("/mock.json")
-      .then((res) => res.json())
-      .then((data) => setMockData(data));
-  }, []);
+    const [orders, setOrders] = useState([]);
 
-  const processCoords = (coords) => {
-    let coordinates = [coords.latitude, coords.longitude];
-    setCoords([...coordinates]);
-  };
+    useEffect(() => {
+      fetch("/order-mock.json")
+        .then((res) => res.json())
+        .then((data) => setOrders(data));
+    }, []);
 
-  const geolocateUser = () => {
-    if ("geolocation" in navigator) {
-      navigator.geolocation.getCurrentPosition((position) => {
-        processCoords(position.coords);
-      });
-    } else {
-      alert("Unable to locale user!");
-    }
-  };
-
-  const selectedStore = (val) => {
-    setCoords(mockData.find((x) => x.storeId == val).coordinates);
-  };
-
-  return (
-    <main>
-      <header>
-        <h2>InstaStore</h2>
-        <input
-          type="text"
-          placeholder="Enter your address..."
-          list="ice-cream-flavors"
-        />
-        <button onClick={geolocateUser}>Locate</button>
-      </header>
-      <div className="grid-map-list">
-        <StoreList stores={mockData} selectedStore={(e) => selectedStore(e)} />
-        <Map coords={coords} />
-      </div>
-    </main>
-  );
+    return (
+        <div>
+            <h3>Orders received from:</h3>
+            {orders.map((order, i) => {
+                return <div key={"order"+i}>
+                    <span>{order.client_name}</span>
+                    <Link href="/map">Check</Link>
+                </div>
+            })}
+        </div>
+    )
 }

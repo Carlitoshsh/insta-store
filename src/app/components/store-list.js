@@ -24,7 +24,7 @@ export default function StoreList({ stores, selectedStore }) {
                 key={store.storeId}
                 onClick={() => selectedStore(store.storeId)}
               >
-                <span class="bold">{store.storeName}</span>
+                <span className="bold">{store.storeName}</span>
                 <span>{store.isOpen ? "Opened" : "Closed"}</span>
                 {/* <span>{store.coordinates}</span> */}
                 <span>{new Date(store.nextDeliveryTime).toLocaleString()}</span>
