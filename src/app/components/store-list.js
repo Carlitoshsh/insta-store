@@ -27,7 +27,7 @@ export default function StoreList({ stores, selectedStore }) {
                 <span class="bold">{store.storeName}</span>
                 <span>{store.isOpen ? "Opened" : "Closed"}</span>
                 {/* <span>{store.coordinates}</span> */}
-                <span>{store.nextDeliveryTime}</span>
+                <span>{new Date(store.nextDeliveryTime).toLocaleString()}</span>
               </div>
             );
           })}
