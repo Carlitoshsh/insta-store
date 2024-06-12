@@ -1,0 +1,43 @@
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  gap: var(--half-space);
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  gap: var(--half-space);
+}
+
+.flex-center {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: var(--half-space);
+}
+
+.small-container {
+  background-color: var(--md-sys-color-background);
+  padding: var(--default-space);
+}
+
+.box {
+  padding: var(--half-space);
+  border: 2px solid var(--md-sys-color-inverse-primary);
+}
+
+main {
+  display: grid;
+  grid-template-rows: 1fr 10fr;
+  height: 100vh;
+}
+
+.overflow {
+    overflow: auto;
+}
+
+.page-padding {
+   padding: var(--default-space); 
+}

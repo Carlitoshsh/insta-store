@@ -14,12 +14,15 @@ export default function Home() {
     }, []);
 
     return (
-        <div>
+        <div className="flex-column overflow page-padding">
             <h3>Orders received from:</h3>
             {orders.map((order, i) => {
-                return <div key={"order"+i}>
+                return <div className="box flex-column" key={"order"+i}>
                     <span>{order.client_name}</span>
-                    <Link href="/map">Check</Link>
+                    <Link href={{
+                        pathname: '/map',
+                        query: order
+                    }}>Check</Link>
                 </div>
             })}
         </div>
