@@ -1,9 +1,17 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Map from "../components/map";
-import StoreList from "../components/store-list";
-import SimpleDialog from "../components/dialog-alert";
+import dynamic from "next/dynamic";
+
+const Map = dynamic(() => import("../components/map"), {
+  ssr: false,
+});
+const StoreList = dynamic(() => import("../components/store-list"), {
+  ssr: false,
+});
+const SimpleDialog = dynamic(() => import("../components/dialog-alert"), {
+  ssr: false,
+});
 import { useSearchParams } from "next/navigation";
 
 function distance(p1, p2) {
@@ -35,10 +43,9 @@ export default function MapStores() {
           }
           setMockData(data);
         });
-    }
+    };
     getData();
   }, [params]);
-
 
   const processCoords = (coords) => {
     let userCoordinates = [coords.latitude, coords.longitude];
@@ -74,15 +81,16 @@ export default function MapStores() {
   return (
     <>
       <div className="grid-map-list">
-        <StoreList stores={mockData} selectedStore={(e) => selectedStore(e)} />
-        <Map coords={coords} storeLocation={mockData}/>
+          <StoreList
+            stores={mockData}
+            selectedStore={(e) => selectedStore(e)}
+          />
+          <Map coords={coords} storeLocation={mockData} />
       </div>
       <button className="locate-me" onClick={geolocateUser}>
         📌 Near me!
       </button>
-      {dialogMsg && (
-        <SimpleDialog text={dialogMsg} />
-      )}
+      {dialogMsg && <SimpleDialog text={dialogMsg} />}
     </>
   );
 }
