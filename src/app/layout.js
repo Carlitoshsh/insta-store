@@ -1,7 +1,8 @@
-import { Inter } from "next/font/google";
+import { Red_Hat_Display } from "next/font/google";
 import "./globals.css";
+import Header from "./components/header";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Red_Hat_Display({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Create Next App",
@@ -13,9 +14,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <main>
-          <header className="flex-center">
-            <h2>InstaStore</h2>
-          </header>
+          <Header />
           {children}
         </main>
       </body>

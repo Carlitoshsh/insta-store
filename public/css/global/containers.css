@@ -18,6 +18,13 @@
   gap: var(--half-space);
 }
 
+.flex-space-between {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: var(--default-space);
+}
+
 .small-container {
   background-color: var(--md-sys-color-background);
   padding: var(--default-space);

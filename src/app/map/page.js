@@ -77,7 +77,7 @@ export default function MapStores() {
         <Map coords={coords} storeLocation={mockData}/>
       </div>
       <button className="locate-me" onClick={geolocateUser}>
-        📌 Locate me!
+        📌 Near me!
       </button>
       {dialogMsg && (
         <SimpleDialog text={dialogMsg} />
