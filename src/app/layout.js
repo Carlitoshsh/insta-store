@@ -1,6 +1,7 @@
 import { Red_Hat_Display } from "next/font/google";
 import "./globals.css";
 import Header from "./components/header";
+import { Suspense } from "react";
 
 const inter = Red_Hat_Display({ subsets: ["latin"] });
 
@@ -15,7 +16,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <main>
           <Header />
-          {children}
+          <Suspense fallback={<div>Loading...</div>}>{children}</Suspense>
         </main>
       </body>
     </html>
