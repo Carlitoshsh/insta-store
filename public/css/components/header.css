@@ -1,0 +1,11 @@
+header {
+  color: var(--md-sys-color-background);
+  background-color: var(--md-sys-color-secondary);
+  height: auto;
+  align-items: center;
+}
+
+header a {
+  color: var(--md-sys-color-background);
+  text-decoration: none;
+}

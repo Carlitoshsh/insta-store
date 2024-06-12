@@ -1,0 +1,82 @@
+[
+    {
+        "order_id": 1,
+        "coordinates": [
+            4.6097,
+            -74.0817
+        ],
+        "client_name": "Juan Perez"
+    },
+    {
+        "order_id": 2,
+        "coordinates": [
+            37.7749,
+            -122.4194
+        ],
+        "client_name": "John Doe"
+    },
+    {
+        "order_id": 3,
+        "coordinates": [
+            51.505,
+            -0.09
+        ],
+        "client_name": "James Smith"
+    },
+    {
+        "order_id": 4,
+        "coordinates": [
+            35.6895,
+            139.6917
+        ],
+        "client_name": "Yamada Taro"
+    },
+    {
+        "order_id": 5,
+        "coordinates": [
+            -33.8688,
+            151.2093
+        ],
+        "client_name": "Bruce Walker"
+    },
+    {
+        "order_id": 6,
+        "coordinates": [
+            30.2672,
+            -97.7429
+        ],
+        "client_name": "Jane Johnson"
+    },
+    {
+        "order_id": 7,
+        "coordinates": [
+            48.8566,
+            2.3522
+        ],
+        "client_name": "Jean Dupont"
+    },
+    {
+        "order_id": 8,
+        "coordinates": [
+            37.5665,
+            126.9786
+        ],
+        "client_name": "Kim Jisoo"
+    },
+    {
+        "order_id": 9,
+        "coordinates": [
+            53.3498,
+            -6.2603
+        ],
+        "client_name": "Patrick Murphy"
+    },
+    {
+        "order_id": 10,
+        "coordinates": [
+            41.9028,
+            -87.6281
+        ],
+        "client_name": "Michael Jordan"
+    }
+]
