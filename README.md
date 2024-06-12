@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# InstaStore
 
-## Getting Started
+```mermaid
+graph TD;
+    A[Home] --> B[Lista de Pedidos];
+    B --> C{Hacer click en un Pedido};
+    C --> D[Lista de Proveedores Cercanos];
+    D --> E[Mapa centrado en el primer proveedor];
+```
 
-First, run the development server:
+
+## Mejoras y compromisos
+- ¿Qué mejorarías de tu código? ¿por qué?
+> Mejoraria el manejo de proveedores en el mapa con Leaflet. 
+- ¿Qué compromisos harías para cumplir con el tiempo? ¿Qué harías la próxima vez para entregar más y sacrificar menos?
+> Pensar primero en la logica principal como cargar los pedidos y luego los proveedores.  
+- ¿Crees que tu aplicación es segura? ¿por qué?
+> Si, he utilizado las buenas practicas para codificar de forma segura. Sin embargo, podria integrarse una herramienta como CodeQL (ya sea local o en Github, para verificar cada PR) para revisar posibles errores semanticos y de seguridad.
+- ¿Qué harías para medir el comportamiento de tu producto en un entorno de producción?
+> Podemos usar pruebas de rendimiento como Google Lighthouse o similares para verificar carga y tiempo de interaccion. De ser necesario, podemos usar Google Analytics para ver como se mueve el usuario en la aplicación. Luego, utilizar CodeQL y Sonar para verificar posibles vulnerabilidades y obtener reportes sobre la mantenibilidad del codigo. 
+
+## Cómo ejecutar
+
+Se utiliza Next.js ya que es recomendado usar un framework con React (ver en [react.dev](https://react.dev/learn/start-a-new-react-project)). Este es un proyecto [Next.js](https://nextjs.org/) iniciado con [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+### Desarrollo
+Primero, ejecuta el servidor de desarrollo:
 
 ```bash
 npm run dev
-# or
+# o
 yarn dev
-# or
+# o
 pnpm dev
-# or
+# o
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abre [http://localhost:3000](http://localhost:3000) con tu navegador para ver el resultado.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Puedes comenzar a editar la página modificando `app/page.js`. La página se actualiza automáticamente a medida que editas el archivo.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Este proyecto utiliza [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) para optimizar y cargar automáticamente Red Hat Display, una fuente personalizada de Google.
 
-## Learn More
+### Version para publicar
+Ejecuta el comando para publicar:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run build
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Esto producira la carpeta `out`, la cual genera los archivos estáticos. Para correr un servidor local de esta carpeta, utiliza el siguiente comando:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```bash
+npx serve out
+```
 
-## Deploy on Vercel
+## Despliegue en Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+La forma más fácil de desplegar tu aplicación Next.js es utilizando la [Plataforma Vercel](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) de los creadores de Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Consulta nuestra [documentación de despliegue de Next.js](https://nextjs.org/docs/deployment) para obtener más detalles.
