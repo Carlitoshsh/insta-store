@@ -31,6 +31,7 @@ export default function MapStores() {
                 distance(coordinates, obj1.coordinates) -
                 distance(coordinates, obj2.coordinates)
             );
+            setCoords(data?.[0]?.coordinates);
           }
           setMockData(data);
         });
