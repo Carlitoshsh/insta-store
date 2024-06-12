@@ -11,9 +11,9 @@ graph TD;
 
 ## Mejoras y compromisos
 - ¿Qué mejorarías de tu código? ¿por qué?
-> Mejoraria el manejo de proveedores en el mapa con Leaflet. 
+> Mejoraria el manejo de proveedores en el mapa con Leaflet. A su vez, trataria de crear un filtro para poder ordenar a los proveedores de acuerdo a `nextDeliveryTime` y `isOpened`. Considero que esto le daría valor agregado a la aplicación actual. Así mismo, añadiría soporte a móviles (hasta el momento solo es responsive en desktop).
 - ¿Qué compromisos harías para cumplir con el tiempo? ¿Qué harías la próxima vez para entregar más y sacrificar menos?
-> Pensar primero en la logica principal como cargar los pedidos y luego los proveedores.  
+> Pensar primero en la logica principal como cargar los pedidos y luego los proveedores.  Así mismo, involucrar los filtros por `nextDeliveryTime` y `isOpened` y asi optimizar la relación entre la orden que llega y los proveedores mas cercanos. 
 - ¿Crees que tu aplicación es segura? ¿por qué?
 > Si, he utilizado las buenas practicas para codificar de forma segura. Sin embargo, podria integrarse una herramienta como CodeQL (ya sea local o en Github, para verificar cada PR) para revisar posibles errores semanticos y de seguridad.
 - ¿Qué harías para medir el comportamiento de tu producto en un entorno de producción?
