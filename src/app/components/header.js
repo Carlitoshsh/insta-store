@@ -12,7 +12,7 @@ export default function Header() {
       {pathname === "/map" && (
         <button onClick={() => router.push('/')}>← Back</button>
       )}
-      <h2><Link href="/">InstaStore</Link></h2>
+      <h2><Link href="/">🥝 kiwiStore</Link></h2>
       <Link href="/about">About</Link>
     </header>
   );

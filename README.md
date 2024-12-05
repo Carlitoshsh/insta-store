@@ -1,23 +1,4 @@
-# InstaStore
-
-```mermaid
-graph TD;
-    A[Home] --> B[Lista de Pedidos];
-    B --> C{Hacer click en un Pedido};
-    C --> D[Lista de Proveedores Cercanos];
-    D --> E[Mapa centrado en el primer proveedor];
-```
-
-
-## Mejoras y compromisos
-- ¿Qué mejorarías de tu código? ¿por qué?
-> Mejoraria el manejo de proveedores en el mapa con Leaflet. A su vez, trataria de crear un filtro para poder ordenar a los proveedores de acuerdo a `nextDeliveryTime` y `isOpened`. Considero que esto le daría valor agregado a la aplicación actual. Así mismo, añadiría soporte a móviles (hasta el momento solo es responsive en desktop).
-- ¿Qué compromisos harías para cumplir con el tiempo? ¿Qué harías la próxima vez para entregar más y sacrificar menos?
-> Pensar primero en la logica principal como cargar los pedidos y luego los proveedores. Decidí agregar un mapa para que el usuario pueda dimensionar la cercania de los proveedores. Para la próxima, involucraría los filtros por `nextDeliveryTime` y `isOpened` y asi optimizar la relación entre la orden que llega y los proveedores mas cercanos. De igual forma, agregar pruebas unitarias al proyecto con Jest.
-- ¿Crees que tu aplicación es segura? ¿por qué?
-> Si, he utilizado las buenas practicas para codificar de forma segura. Sin embargo, podria integrarse una herramienta como CodeQL (ya sea local o en Github, para verificar cada PR) para revisar posibles errores semanticos y de seguridad.
-- ¿Qué harías para medir el comportamiento de tu producto en un entorno de producción?
-> Podemos usar pruebas de rendimiento como Google Lighthouse o similares para verificar carga y tiempo de interaccion. De ser necesario, podemos usar Google Analytics para ver como se mueve el usuario en la aplicación. Luego, utilizar CodeQL y Sonar para verificar posibles vulnerabilidades y obtener reportes sobre la mantenibilidad del codigo. 
+# 🥝 kiwiStore
 
 ## Cómo ejecutar
 
